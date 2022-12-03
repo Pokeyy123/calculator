@@ -27,3 +27,23 @@ function operate(operator,a , b) {
         return "ERROR";
     }
 }
+const equals = document.querySelector('.equals');
+let displayData = "";
+let display = document.querySelector(".display");
+let buttons = document.querySelectorAll(".num, .oper");
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        const buttonValue = button.getAttribute('data-num');
+        displayData += buttonValue;
+        display.textContent = displayData; 
+    })
+})
+
+equals.addEventListener("click", () => {
+    if(buttonValue == '+') {
+        display.operate(buttons);
+        display.textContent = displayData;
+
+    };
+})
+
