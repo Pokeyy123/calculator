@@ -21,4 +21,24 @@ button {
     font-size: 20px;
 }
 
+.oper {
+    background-color: blueviolet;
+
+}
+
+.clear, .equals {
+    background-color: chartreuse;
+}
+
+.num {
+    background-color: #d65c15;
+}
+
+button {
+    border-color: black;
+}
+
+.container {
+    background-color: ;
+}
 

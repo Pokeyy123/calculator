@@ -27,6 +27,7 @@ function operate(operator,a , b) {
         return "ERROR";
     }
 }
+const clear = document.querySelector('.clear');
 const equals = document.querySelector('.equals');
 let displayData = "";
 let display = document.querySelector(".display");
@@ -40,10 +41,11 @@ buttons.forEach(button => {
 })
 
 equals.addEventListener("click", () => {
-    if(buttonValue == '+') {
-        display.operate(buttons);
-        display.textContent = displayData;
-
-    };
+    displayData = eval(displayData);
+    display.textContent = displayData;
 })
 
+clear.addEventListener('click', () => {
+    displayData = "";
+    display.textContent = displayData;
+})
